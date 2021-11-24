@@ -21,7 +21,12 @@ const UsersList = (props) => {
 };
 
 UsersList.propTypes = {
-    users: Proptypes.array
+    users: Proptypes.arrayOf(
+        Proptypes.shape({
+            name: Proptypes.string,
+            age: Proptypes.string
+        })
+    )
 }
 
 
